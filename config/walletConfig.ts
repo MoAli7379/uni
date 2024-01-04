@@ -58,11 +58,16 @@ const chains = [
     rpcUrl: 'https://rpc.ankr.com/arbitrum',
   },
 ]
-
+const walletConnectOptions = {
+  bridge: 'https://bridge.walletconnect.org', // Example bridge URL
+  infuraId: 'YOUR_INFURA_ID', // Replace with your Infura ID
+  // Add other necessary WalletConnectOptions here
+};
 const injected = injectedModule()
 const coinbase = coinbaseModule()
 const dcent = dcentModule()
-const walletConnect = walletConnectModule()
+const walletConnect = walletConnectModule(walletConnectOptions);
+
 const ledger = ledgerModule()
 const keystone = keystoneModule()
 const keepkey = keepkeyModule()
