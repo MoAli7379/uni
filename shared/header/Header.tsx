@@ -116,6 +116,7 @@ const Header = () => {
             </React.Fragment>
           ))}
         </div>
+        <div></div>
         <div className='header__search'>
           <div className='header__search__wrapper'>
             <Image src={SearchLogo} alt='search' />
@@ -138,6 +139,7 @@ const Header = () => {
                 color: '#fc72ff', // Custom text color
               }}
             >
+              
               {connecting ? 'Connecting' : wallet ? 'Disconnect' : 'Connect Wallet'}
             </button>
           )}
